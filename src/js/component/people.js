@@ -39,7 +39,10 @@ export const People = () => {
 										<Link to={`/people/${index}`}>
 											<Button variant="primary">Go somewhere</Button>
 										</Link>
-										<Link>
+										<Link
+											onClick={() => {
+												actions.addFavorite(item.name, "people");
+											}}>
 											<Button variant="outline-warning">
 												<i className="far fa-heart" />
 											</Button>

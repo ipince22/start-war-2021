@@ -10,6 +10,7 @@ import injectContext from "./store/appContext";
 import { CarouselSW } from "./component/carousel";
 import { People } from "./component/people";
 import { Planet } from "./component/planet";
+import { Menu } from "./component/menu";
 //diq----
 
 import { Navbar } from "./component/navbar";
@@ -26,7 +27,7 @@ const Layout = () => {
 		<div className="d-flex flex-column">
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
-					<Navbar />
+					<Menu />
 					<Switch>
 						<Route exact path="/">
 							<CarouselSW />
@@ -51,7 +52,6 @@ const Layout = () => {
 							<h1>Not found!</h1>
 						</Route>
 					</Switch>
-					<Footer />
 				</ScrollToTop>
 			</BrowserRouter>
 		</div>
