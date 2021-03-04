@@ -33,7 +33,18 @@ export const People = () => {
 											<span>{item.eye_color}</span>
 										</p>
 									</Card.Text>
-									<Button variant="primary">Go somewhere</Button>
+									<ButtonToolbar
+										className="justify-content-between"
+										aria-label="Toolbar with Button groups">
+										<Link to={`/people/${index}`}>
+											<Button variant="primary">Go somewhere</Button>
+										</Link>
+										<Link>
+											<Button variant="outline-warning">
+												<i className="far fa-heart" />
+											</Button>
+										</Link>
+									</ButtonToolbar>
 								</Card.Body>
 							</Card>
 						</Col>

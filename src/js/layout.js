@@ -14,6 +14,7 @@ import { Planet } from "./component/planet";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
+import { PeopleDetails } from "./views/peopleDetails";
 
 //create your first component
 const Layout = () => {
@@ -35,6 +36,9 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/planet">
 							<Planet />
+						</Route>
+						<Route exact path="/people/:id">
+							<PeopleDetails />
 						</Route>
 
 						<Route exact path="/demo">
