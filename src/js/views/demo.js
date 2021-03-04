@@ -8,6 +8,9 @@ import "../../styles/demo.scss";
 export const Demo = () => {
 	const { store, actions } = useContext(Context);
 
+	console.log("peoples", store.peoples);
+	console.log("planets", store.planets);
+
 	return (
 		<div className="container">
 			<ul className="list-group">
