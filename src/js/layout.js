@@ -6,6 +6,11 @@ import { Home } from "./views/home";
 import { Demo } from "./views/demo";
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
+//diq----
+import { CarouselSW } from "./component/carousel";
+import { People } from "./component/people";
+import { Planet } from "./component/planet";
+//diq----
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
@@ -23,8 +28,15 @@ const Layout = () => {
 					<Navbar />
 					<Switch>
 						<Route exact path="/">
-							<Home />
+							<CarouselSW />
 						</Route>
+						<Route exact path="/people">
+							<People />
+						</Route>
+						<Route exact path="/planet">
+							<Planet />
+						</Route>
+
 						<Route exact path="/demo">
 							<Demo />
 						</Route>
