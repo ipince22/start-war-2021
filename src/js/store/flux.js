@@ -49,6 +49,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			addFavorite: (name, type) => {
 				const store = getStore();
+				//console.log("lin-52", store);
 				let count = 0;
 				store.favorites.map(each => {
 					if (each.name == name) {
@@ -56,15 +57,20 @@ const getState = ({ getStore, getActions, setStore }) => {
 					}
 				});
 				if (count == 0) {
-					setStore({
-						favorites: [
-							...store.favorites,
-							{
-								name: name,
-								type: type
-							}
-						]
-					});
+					let obj = {
+						name: name,
+						type: type
+					};
+					setStore({ favorites: store.favorites.concat(obj) });
+					// setStore({
+					// 	favorites: [
+					// 		...store.favorites,
+					// 		{
+					// 			name: name,
+					// 			type: type
+					// 		}
+					// 	]
+					// });
 				}
 			},
 

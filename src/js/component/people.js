@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 export const People = () => {
 	const { store, actions } = useContext(Context);
+	//console.log("store.people", store.peoples);
 	return (
 		<Container>
 			<h1 className="display-5 text-center mt-5 text-primary">Characters</h1>
